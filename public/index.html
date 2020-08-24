@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue.js homework</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alata&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./js/bundle.js"></script>
+</head>
+
+<body>
+
+    <h1>ToDo List</h1>
+
+    <main id="__app_main">
+
+        <form v-on:submit.prevent="saveItem">
+
+            <label for="todo_item">Add an item</label>
+            <input type="text" id="todo_item" v-model="todoItem" placeholder="New item" required /><br />
+            <label for="todo_priority">High</label>
+            <input type="radio" id="todo_priority" name="todo_priority" value="high" />
+            <label>Low</label>
+            <input type="radio" id="todo_priority" name="todo_priority" value="low" />
+            <input type="submit" value="Add item" />
+
+        </form>
+
+        <ul>
+            <li v-for="item in items" :class="item.priority ? 'high-prio':'low-prio'">
+                <p>{{ item.item }}</p>
+            </li>
+        </ul>
+
+    </main>
+    
+</body>
+
+</html>

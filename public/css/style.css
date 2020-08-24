@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+    font-family: 'Alata', sans-serif;
+}
+
+ul{
+    margin: 20px 0 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+li{
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid rgb(39, 39, 39);
+    font-size: 18px;
+}
+.high-prio{
+    color: rgb(129, 23, 23);
+    border: 2px solid rgb(129, 23, 23);
+    font-weight: bold;
+}
